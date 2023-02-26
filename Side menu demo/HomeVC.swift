@@ -8,7 +8,7 @@
 import UIKit
 import SideMenu
 
-class ViewController: UIViewController {
+class HomeVC: UIViewController {
 var menu: SideMenuNavigationController?
     
     override func viewDidLoad() {
@@ -19,17 +19,7 @@ var menu: SideMenuNavigationController?
         SideMenuManager.default.addPanGestureToPresent(toView: view)
         SideMenuManager.default.leftMenuNavigationController = menu
         menu?.setNavigationBarHidden(true, animated: true)
-       
-        // collectionView Layout
-        let Layout = UICollectionViewFlowLayout()
-        let Width = (UIScreen.main.bounds.width - 40)/3
-        Layout.itemSize = CGSize(width: Width, height: 170)
-        Layout.minimumLineSpacing = 10
-        Layout.minimumInteritemSpacing = 5
-        Layout.sectionInset = UIEdgeInsets(top: 5, left: 10, bottom: 20, right: 10)
-        Layout.scrollDirection = .vertical
-        
-    }
+      }
 
     
     @IBAction func menuBtn(_ sender: Any) {
